@@ -69,6 +69,8 @@ class GetPosts:
 class AddPosts:
     """
     Добавление поста в группу или добалвение отложенного поста.
+    domain - id или короткое имя группы из которой нужно взять посты.
+    owner_id - id руппы в котою унжно назначить автопостинг. должны быть разрешение на добавление постов в группу.
     """
 
     def __init__(self, *, api, year=2017, month=9, day=28, hour=0, minutes=0,
@@ -139,5 +141,5 @@ if __name__ == '__main__':
 
     print('Название группы')
     AddPosts(api=api, year=year, month=month, day=day, hour=hour, minutes=minutes,
-             step=step, domain='cloudytech', owner_id='-154175714', count=count, offset=offset)
+             step=step, domain='ID_GROUP', owner_id='-USER_ID_GROUP', count=count, offset=offset)
 
